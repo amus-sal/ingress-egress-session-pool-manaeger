@@ -19,8 +19,8 @@ func (ing *Ingress) NewIngress() (chan []byte, error) {
 	rec := make(chan []byte, 0)
 	if ing.Type == "STOMP" {
 		stomp := &st.STOMP{
-			Host:           "192.168.71.71:61613",
-			QueueName:      "Test_A",
+			Host:           "localhost:61613",
+			QueueName:      "Test",
 			Username:       "",
 			Password:       "",
 			SSL:            false,
